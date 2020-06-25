@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Catalog\" />
+    <Folder Include="Catalog\Products\" />
+    <Folder Include="Common\" />
+    <Folder Include="System\" />
+    <Folder Include="System\Users\" />
+    <Folder Include="System\Roles\" />
+    <Folder Include="System\Languages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EshopSolution.Data\EshopSolution.Data.csproj" />
+    <ProjectReference Include="..\EshopSolution.Utilities\EshopSolution.Utilities.csproj" />
+    <ProjectReference Include="..\EshopSolution.ViewModels\EshopSolution.ViewModels.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+  </ItemGroup>
+</Project>
