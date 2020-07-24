@@ -20,6 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace EshopSolution.AdminApp.Controllers
 {
+
     public class LoginController : Controller
     {
         private readonly IUserApiClient _userApiClient;

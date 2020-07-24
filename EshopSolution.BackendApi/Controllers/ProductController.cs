@@ -32,7 +32,7 @@ namespace EshopSolution.BackendApi.Controllers
         //    }   
         //http://host:port/product/languageId
         [HttpGet("{languageId}")]
-        public async Task<IActionResult> GetAllPaging(string languageId, [FromForm]GetPublicProductPagingRequest request)
+        public async Task<IActionResult> GetAllPaging(string languageId, [FromQuery]GetPublicProductPagingRequest request)
         {
             var products = await _productService.GetAllByCategoryId(languageId, request);
             return Ok(products);

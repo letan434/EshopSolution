@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Linq;
+using System.Collections.Generic;
 
 
 namespace EshopSolution.AdminApp.Services
@@ -35,7 +36,8 @@ namespace EshopSolution.AdminApp.Services
 
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
-            var response = await client.PostAsync("/api/users/authenticate", httpContent);
+            var response = await client.PostAsync("/api/Users/authenticate", httpContent);
+            //var reson = response.RequestMessage;
             if (response.IsSuccessStatusCode)
             {
                 return JsonConvert.DeserializeObject<ApiSuccessResult<string>>(await response.Content.ReadAsStringAsync());

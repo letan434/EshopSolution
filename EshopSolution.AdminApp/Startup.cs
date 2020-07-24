@@ -32,7 +32,7 @@ namespace EshopSolution.AdminApp
                 .AddCookie(options =>
                 {
                     options.LoginPath = "/Login/Index";
-                    options.AccessDeniedPath = "/User/Forbidden/";
+                    options.AccessDeniedPath = "/Login/Forbidden/";
                 });
 
             services.AddControllersWithViews()
@@ -42,6 +42,10 @@ namespace EshopSolution.AdminApp
             //services.AddTransient<>
             services.AddTransient<IRoleApiClient, RoleApiClient>();
             services.AddTransient<ILanguageApiClient, LanguageApiClient>();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
             IMvcBuilder builder = services.AddRazorPages();
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 #if DEBUG
@@ -73,6 +77,7 @@ namespace EshopSolution.AdminApp
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
