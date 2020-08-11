@@ -30,12 +30,10 @@ namespace EshopSolution.AdminApp.Controllers
             _configuration = configuration;
         }
        [HttpGet]
-        public async Task<ActionResult> Index()
-        {
+        public async Task<ActionResult> Index() {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return View();
-
-
+            
         }
         [HttpPost]
         public async Task<IActionResult> Index(LoginRequest request)
@@ -55,6 +53,7 @@ namespace EshopSolution.AdminApp.Controllers
                 ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
                 IsPersistent = false
             };
+            HttpContext.Session.SetString("Token", result.ResultObj);
             HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, _configuration[SystemConstants.AppSettings.DefaultLanguageId]);
             HttpContext.Session.SetString(SystemConstants.AppSettings.Token, result.ResultObj);
             await HttpContext.SignInAsync(

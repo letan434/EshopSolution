@@ -9,6 +9,5 @@ namespace EshopSolution.AdminApp.Services
     public interface ILanguageApiClient
     {
         Task<ApiResult<List<LanguageVm>>> GetAll();
-
     }
 }
