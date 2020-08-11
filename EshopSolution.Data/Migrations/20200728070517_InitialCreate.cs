@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EshopSolution.Data.Migrations
 {
-    public partial class ChangeFile : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -448,12 +448,12 @@ namespace EshopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "AppRole",
                 columns: new[] { "Id", "ConcurrencyStamp", "Description", "Name", "NormalizedName" },
-                values: new object[] { new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"), "2a510bf3-4dd6-41ba-b342-cd711294e5c5", "Administrator role", "admin", "admin" });
+                values: new object[] { new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"), "b775a574-687b-41eb-a3c7-31c5ba5e19a4", "Administrator role", "admin", "admin" });
 
             migrationBuilder.InsertData(
                 table: "AppUser",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Dob", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"), 0, "99078e82-6ade-4fac-b1d1-9e9ec9b5a050", new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "letan434@gmail.com", true, "Le", "Tan", false, null, "letan434@gmail.com", "admin", "AQAAAAEAACcQAAAAEAQhRQaDqcXxGgsiLLB41fPkxXp3+U6p05KLUHMWJp1x3Nimg/F4LB/AZuOBsG8H/w==", null, false, "", false, "admin" });
+                values: new object[] { new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"), 0, "62b6d2f7-e52d-46d9-ba2f-14f398846f5f", new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "letan434@gmail.com", true, "Le", "Tan", false, null, "letan434@gmail.com", "admin", "AQAAAAEAACcQAAAAEI7lOArJmzRBulRaEZVQXMQqdSyL4czwAzDcXpc4x38pb1+PpPNEcYRzZb9FIg6ShA==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "AppUserRoles",
@@ -481,7 +481,7 @@ namespace EshopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "DateCreated", "OriginalPrice", "Price", "SeoAlias" },
-                values: new object[] { 1, new DateTime(2020, 3, 14, 1, 2, 28, 317, DateTimeKind.Local).AddTicks(6730), 100000m, 200000m, null });
+                values: new object[] { 1, new DateTime(2020, 7, 28, 14, 5, 16, 618, DateTimeKind.Local).AddTicks(5810), 100000m, 200000m, null });
 
             migrationBuilder.InsertData(
                 table: "CategoryTranslations",
