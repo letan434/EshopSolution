@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace EshopSolution.Application.System.Languages
 {
-    public class LanguageService
+    public class LanguageService :ILanguageService
     {
         private readonly IConfiguration _config;
         private readonly EShopDbContext _context;

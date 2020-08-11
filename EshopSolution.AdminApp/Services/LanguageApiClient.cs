@@ -9,11 +9,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace EshopSolution.AdminApp.Services
 {
-    public class LanguageApiClient: BaseApiClient, ILanguageApiClient
+    public class LanguageApiClient : BaseApiClient, ILanguageApiClient
     {
-        public LanguageApiClient(IHttpClientFactory httpClientFactory,
-                   IHttpContextAccessor httpContextAccessor,
-                    IConfiguration configuration) : base(httpClientFactory, httpContextAccessor, configuration)
+        public LanguageApiClient(IHttpClientFactory httpClientFactory, IHttpContextAccessor httpContextAccessor,
+            IConfiguration configuration) :base(httpClientFactory,httpContextAccessor,configuration)
         {
         }
 
