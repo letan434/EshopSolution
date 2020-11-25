@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace EshopSolution.ViewModels.Catalog.Products
 {
     public class ProductViewModel
@@ -18,5 +20,7 @@ namespace EshopSolution.ViewModels.Catalog.Products
 
         public string SeoAlias { get; set; }
         public string LanguageId { set; get; }
+        public List<string> Categories { get; set; } = new List<string>();
+        public string ThumbnailImage { get; set; }
     }
 }

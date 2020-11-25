@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using EshopSolution.ViewModels.Catalog.ProductImages;
 using EshopSolution.ViewModels.Catalog.Products;
+using EshopSolution.ViewModels.Catalog.ProductTranslations;
 using EshopSolution.ViewModels.Common;
 
 namespace EshopSolution.Application.Catalog.Products
 {
     public interface IProductService
     {
+        Task<ApiResult<bool>> CategoryAssign(int id, CategoryAssignRequest request);
+
         Task<int> Create(ProductCreateRequest request);
 
         Task<int> Update(ProductUpdateRequest request);
@@ -37,6 +40,11 @@ namespace EshopSolution.Application.Catalog.Products
 
         Task<PagedResult<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request);
 
+        Task<int> AddProductTranslation(int productId, AddProductTranslationRequest request);
+        Task<int> RemoveProductTranslation(int productTranslationId);
+        Task<List<ProducTranslationViewModel>> GetListProductTranslations(int productId);
+        Task<int> AddProductInCategory(int productId, int categoryId);
+        Task<int> RemoveProductInCategory(int productId, int categoryId);
 
     }
 }   

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using EshopSolution.Application.Catalog.Categories;
 using EshopSolution.Application.Catalog.Products;
 using EshopSolution.Application.Common;
 using EshopSolution.Application.System.Languages;
@@ -45,6 +47,8 @@ namespace EshopSolution.BackendApi
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<EShopDbContext>()
                 .AddDefaultTokenProviders();
+            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
             //Declare DI
             services.AddTransient<IStorageService, FileStorageService>();
 
@@ -57,6 +61,7 @@ namespace EshopSolution.BackendApi
             services.AddTransient<ILanguageService, LanguageService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ICategoryService, CategoryService>();
 
 
             services.AddControllersWithViews();

@@ -12,7 +12,7 @@ namespace EshopSolution.Data.Extensions
         public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AppConfig>().HasData(
-                new AppConfig() { Key = "HomeTitle", Value = "This is home page of eShopSolution" },
+               new AppConfig() { Key = "HomeTitle", Value = "This is home page of eShopSolution" },
                new AppConfig() { Key = "HomeKeyword", Value = "This is keyword of eShopSolution" },
                new AppConfig() { Key = "HomeDescription", Value = "This is description of eShopSolution" }
                );
@@ -100,7 +100,7 @@ namespace EshopSolution.Data.Extensions
             {
                 Id = roleId,
                 Name = "admin",
-                NormalizedName = "admin",
+               NormalizedName = "admin",
                 Description = "Administrator role"
             });
 

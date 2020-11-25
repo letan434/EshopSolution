@@ -448,12 +448,12 @@ namespace EshopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "AppRole",
                 columns: new[] { "Id", "ConcurrencyStamp", "Description", "Name", "NormalizedName" },
-                values: new object[] { new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"), "b775a574-687b-41eb-a3c7-31c5ba5e19a4", "Administrator role", "admin", "admin" });
+                values: new object[] { new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"), "2c7adcad-6599-4106-a45f-a8f62714959a", "Administrator role", "admin", "admin" });
 
             migrationBuilder.InsertData(
                 table: "AppUser",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Dob", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"), 0, "62b6d2f7-e52d-46d9-ba2f-14f398846f5f", new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "letan434@gmail.com", true, "Le", "Tan", false, null, "letan434@gmail.com", "admin", "AQAAAAEAACcQAAAAEI7lOArJmzRBulRaEZVQXMQqdSyL4czwAzDcXpc4x38pb1+PpPNEcYRzZb9FIg6ShA==", null, false, "", false, "admin" });
+                values: new object[] { new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"), 0, "bef1d56c-1cf7-4df6-8c4c-8d93b33c4378", new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "letan434@gmail.com", true, "Le", "Tan", false, null, "letan434@gmail.com", "admin", "AQAAAAEAACcQAAAAEFVWB5D566nanSEU5xaV8MHGGeXna8QDnEwt0IQLZPvILHPvhdULevmOCs1lcbmlpQ==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "AppUserRoles",
@@ -481,7 +481,7 @@ namespace EshopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "DateCreated", "OriginalPrice", "Price", "SeoAlias" },
-                values: new object[] { 1, new DateTime(2020, 7, 28, 14, 5, 16, 618, DateTimeKind.Local).AddTicks(5810), 100000m, 200000m, null });
+                values: new object[] { 1, new DateTime(2020, 8, 29, 17, 17, 20, 722, DateTimeKind.Local).AddTicks(5430), 100000m, 200000m, null });
 
             migrationBuilder.InsertData(
                 table: "CategoryTranslations",

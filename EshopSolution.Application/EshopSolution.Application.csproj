@@ -12,6 +12,8 @@
     <Folder Include="System\Users\" />
     <Folder Include="System\Roles\" />
     <Folder Include="System\Languages\" />
+    <Folder Include="Catalog\Categories\" />
+    <Folder Include="AutoMapper\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EshopSolution.Data\EshopSolution.Data.csproj" />
@@ -24,5 +26,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
   </ItemGroup>
 </Project>

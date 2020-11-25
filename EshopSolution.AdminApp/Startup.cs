@@ -42,9 +42,10 @@ namespace EshopSolution.AdminApp
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
             services.AddTransient<IUserApiClient, UserApiClient>();
-            //services.AddTransient<>
             services.AddTransient<IRoleApiClient, RoleApiClient>();
             services.AddTransient<ILanguageApiClient, LanguageApiClient>();
+            services.AddTransient<IProductApiClient, ProductApiClient>();
+            services.AddTransient<ICategoryApiClient, CategoryApiClient>();
             IMvcBuilder builder = services.AddRazorPages();
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 #if DEBUG
